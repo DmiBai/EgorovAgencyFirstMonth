@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравляем</title>
+</head>
+<body>
+    <div id="container-text">
+        <h1 id="title">Ваши данные были успешно сохранены!</h1>
+        <h2 id="subtitle">Но нам нужно ещё кое что:</h2>
+        <form id="form" method="POST" action="#">
+            <p>Ваше имя: <input id="userName" name="userName" type="text"></p>
+            <p>Ваша почта: <input id="userEmail" name="userEmail" type="text"></p>
+            <p>Ваш возраст: <input id="userAge" name="userAge" type="text"></p>
+            <p>Ваш пол: 
+                <select id="userGender" name="userGender" type="text">
+                    <option value="man">Мужщина</option>
+                    <option value="woman">Женщина</option>
+                </select>
+            </p>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <script src="./success.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

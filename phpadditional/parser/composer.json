@@ -1,0 +1,15 @@
+{
+    "name": "user/parser",
+    "autoload": {
+        "psr-4": {
+            "User\\Parser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dzmitry",
+            "email": "baiduk.dima@yandex.ru"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синхрон корзина</title>
+</head>
+<style>
+    #app input,
+    #app select {
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        border: 1px solid rgb(51 51 51);
+    }
+
+    #app button {
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        background-color: #00bcd4;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s transform linear;
+
+    }
+
+    #app button:hover {
+        transform: scale(0.98);
+    }
+
+    #content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #content .item {
+        max-width: 400px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #content img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;        
+    }
+
+    .wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+    }
+
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 16px;
+        max-height: 500px;
+        overflow-y: auto;
+        display: none;
+    }
+
+    .modal.show {
+        display: flex;
+    }
+
+    .modal.modal-auth {
+        width: 300px;
+        flex-direction: column;
+        background-color: #ccc;
+        padding: 30px;
+        color: #fff;
+    }
+
+    .modal.modal-auth input {
+        margin-bottom: 16px;
+    }
+
+    .modal.modal-auth button {
+        width: 100%;
+    }
+
+    .modal.modal-cart {
+        width: 400px;
+        flex-direction: column;
+        background-color: #ccc;
+        padding: 30px;
+        color: #000;
+    }
+
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cart-header-close {
+        width: max-content;
+        margin-left: auto;
+        margin-bottom: 20px;
+        color: rgb(0 0 0);
+        cursor: pointer;
+    }
+
+    .cart-body-total-button button {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cart-body-content {
+        margin-top: 20px;
+    }
+
+    .cart-body-total-title {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    #exit-user {
+        display: none;
+    }
+
+    #exit-user.show {
+        display: block;
+    }
+</style>
+<body>
+    <div id="app">
+        <button id="toggle-shown-cart">Корзина (<span id="amount-products">0</span>)</button>
+        <button id="add-product-in-cart" >Добавить ещё один товар в корзину</button>
+        <button id="delete-product-in-cart">Удалить товар из корзины</button>
+        <button id="exit-user" class="smth">Выйти</button>
+        <div id="modal-cart" class="modal-cart modal">
+            <div class="cart-header">
+                <div class="cart-header-title">Корзина</div>
+                <div class="cart-header-close" id="modal-cart-close">X</div>
+            </div>
+            <div class="cart-body">
+                <div class="cart-body-content">
+                    <div class="cart-body-content-title">Товары:</div>
+                    <div id="content" class="cart-body-content-items">
+                    </div>
+                </div>
+                <div class="cart-body-total">
+                    <div class="cart-body-total-title">Итого: 0 руб.</div>
+                    <div class="cart-body-total-button">
+                        <button id="makeOrder">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-auth" class="modal-auth modal">
+            <form id="form" action="#">
+                <div class="cart-header-close" id="modal-auth-close">X</div>
+                <input id="login" name="login" type="text" placeholder="Введите login">
+                <input id="password" name="password" type="password" placeholder="Введите пароль"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$"
+                       title="минимум одна заглавная буква, буквы только латиница, минимум одна цифра,
+                       длина минимум 6 символов">
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
+</html>

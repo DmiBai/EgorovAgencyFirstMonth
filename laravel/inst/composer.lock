@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "30a537bdeb7749d6c0eedeff23be65f0",
+    "packages": [
+        {
+            "name": "espresso-dev/instagram-basic-display-php",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/espresso-dev/instagram-basic-display-php.git",
+                "reference": "e15ac322fd5ee3b8469bcb3e16c90667b8f2e208"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/espresso-dev/instagram-basic-display-php/zipball/e15ac322fd5ee3b8469bcb3e16c90667b8f2e208",
+                "reference": "e15ac322fd5ee3b8469bcb3e16c90667b8f2e208",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "EspressoDev\\InstagramBasicDisplay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Herman Schutte",
+                    "email": "herman@espresso.dev"
+                }
+            ],
+            "description": "A simple PHP class for accessing the Instagram Basic Display API",
+            "homepage": "https://github.com/espresso-dev/instagram-basic-display-php",
+            "keywords": [
+                "api",
+                "instagram"
+            ],
+            "support": {
+                "issues": "https://github.com/espresso-dev/instagram-basic-display-php/issues",
+                "source": "https://github.com/espresso-dev/instagram-basic-display-php/tree/v1.1.6"
+            },
+            "time": "2021-04-13T06:37:08+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

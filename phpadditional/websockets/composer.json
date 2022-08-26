@@ -1,0 +1,17 @@
+{
+    "name": "user/websockets",
+    "autoload": {
+        "psr-4": {
+            "User\\Websockets\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dzmitry",
+            "email": "baiduk.dima@yandex.ru"
+        }
+    ],
+    "require": {
+        "cboden/ratchet": "^0.4.4"
+    }
+}

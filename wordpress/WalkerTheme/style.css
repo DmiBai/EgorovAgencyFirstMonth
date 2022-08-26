@@ -1,0 +1,30 @@
+/**
+Theme Name: walker-theme
+Author: Me
+*/
+
+body {
+    background: #F2F1EC;
+    max-width: 700px;
+    margin: 2em auto;
+}
+
+.header, .footer {
+    margin: 2em auto;
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #0c88b4;
+}
+
+.post_title {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.slider {
+    background-color: #00a0d2;
+}
+
+h1{
+    text-align: center;
+}

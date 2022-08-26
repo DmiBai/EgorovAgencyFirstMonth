@@ -1,0 +1,9 @@
+{
+    "name": "vendor_name/my-first-theme",
+    "description": "nothing",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "espresso-dev/instagram-basic-display-php": "^1.1"
+    }
+}
